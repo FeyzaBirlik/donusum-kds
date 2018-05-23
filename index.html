@@ -1,0 +1,27 @@
+
+<?php
+session_start();
+               
+
+require "kontrol.php";
+
+
+
+
+$sorgu1="SELECT binalar.bina_id,binalar.konum,kullanim.k_durum,yikim.yikim_sekli,binalar.risk_puani,binalar.foto
+FROM binalar,kullanim,yikim
+ WHERE binalar.k_durum=kullanim.k_durum and yikim.yikim_sekli=binalar.yikim_sekli " ;
+
+ $a=mysqli_query($baglan,$sorgu1);
+
+ include 'bootstrap/tasarim.php';
+ 
+
+	
+	
+
+
+
+?>
+
+
